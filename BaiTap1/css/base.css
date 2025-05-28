@@ -1,0 +1,4 @@
+.bg-image>* {
+    position: relative;
+    z-index: 2;
+}

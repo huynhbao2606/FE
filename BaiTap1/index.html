@@ -1,177 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo HTML</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.6/dist/quartz/bootstrap.min.css"
-    />
-  </head>
-  <link rel="stylesheet" href="./css/base.css" />
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            class="d-inline-block mx-2"
-            src="./Image/logo.jpg"
-            alt=""
-            width="50"
-            height="50"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="./index.html"
-                >Home
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./tea/index.html">Tea</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown</a
-              >
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-sm-2"
-              type="search"
-              placeholder="Search"
-            />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KFC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+</head>
+<link rel="stylesheet" href="./css/base.css" />
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="dark">
     <div class="container">
-      <h1 class="text-center">CyberSoft</h1>
-      <div class="container text-center">
+      <a class="navbar-brand" href="./index.html">
+        <img class="d-inline-block mx-2" src="./Image/logo.jpg" alt width="50" height="50" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-bold" href="#gioithieu">Giới
+              Thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-bold" href="#phattrien">Phát
+              Triển</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-bold" href="./news/news.html">Tin
+              Tức</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-bold" href="https://kfcvietnam.com.vn/menu/hot-deal">Khuyến Mãi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-bold" href="#banggia">Bảng Giá</a>
+          </li>
+        </ul>
+        <img class="d-flex-" src="./Image/kfcword.jpg" alt width="70" height="20" />
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar bg-dark container-fluid">
+    <div class="container d-flex justify-content-center">
+      <span class="text-light mb-0 pe-3 fw-bold">Đặt Hàng</span>
+      <span class="text-light mb-0 pe-3 fw-bold">Giao Hàng</span>
+      <span class="text-light mb-0 pe-3 fw-bold">Mang Đi</span>
+      <button type="button" class="btn btn-danger fw-bold rounded-5">
+        Bắt Đầu Đặt Hàng
+      </button>
+    </div>
+  </nav>
+  <div class="container p-3">
+    <section class="text-center">
+      <div class="row">
+        <h1 class="mb-4">Giới Thiệu KFC</h1>
         <div class="row">
-          <div class="col-4">
-            <div class="card mb-3">
-              <h3 class="card-header">Card header</h3>
-              <img
-                src="/HTML/Image/chilling-cafe-01.jpg"
-                class="d-block user-select-none"
-                width="100%"
-                height="200"
-                aria-label="Placeholder: Image cap"
-                focusable="false"
-                role="img"
-                preserveAspectRatio="xMidYMid slice"
-                viewBox="0 0 318 180"
-                style="font-size: 1.125rem; text-anchor: middle"
-              />
-              <div class="card-footer text-muted">Footer</div>
-            </div>
+          <div class="col-6">
+            <span class="lead">
+              KFC là cụm từ viết tắt của Kentucky Fried Chicken - Gà Rán
+              Kentucky, một trong các thương hiệu thuộc Tập đoàn Yum Brands
+              Inc (Hoa Kỳ). KFC chuyên về các sản phẩm gà rán và nướng, với
+              các món ăn kèm theo và các loại sandwiches chế biến từ thịt gà
+              tươi. Hiện nay đang có hơn 20.000 nhà hàng KFC tại 109 quốc gia
+              và vùng lãnh thổ trên toàn thế giới.
+              <p class="fw-bold">
+                KFC nổi tiếng thế giới với công thức chế biến gà rán truyền
+                thống Original Recipe, được tạo bởi cùng một công thức pha
+                trộn bí mật 11 loại thảo mộc và gia vị khác nhau do Đại tá
+                Harland Sanders hoàn thiện hơn nửa thế kỷ trước.
+              </p>
+              Ngoài thực đơn gà rán, KFC còn đa dạng hóa sản phẩm tạo nên thực
+              đơn vô cùng phong phú dành cho người tiêu dùng trên toàn thế
+              giới có thể thưởng thức hơn 300 món ăn khác nhau từ món gà nướng
+              tại thị trường Việt Nam cho tới sandwich cá hồi tại Nhật Bản.
+            </span>
           </div>
-          <div class="col-4">
-            <div class="card mb-3">
-              <h3 class="card-header">Card header</h3>
-              <img
-                src="/HTML/Image/chilling-cafe-01.jpg"
-                class="d-block user-select-none"
-                width="100%"
-                height="200"
-                aria-label="Placeholder: Image cap"
-                focusable="false"
-                role="img"
-                preserveAspectRatio="xMidYMid slice"
-                viewBox="0 0 318 180"
-                style="font-size: 1.125rem; text-anchor: middle"
-              />
-              <div class="card-footer text-muted">Footer</div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card mb-3">
-              <h3 class="card-header">Card header</h3>
-              <img
-                src="/HTML/Image/chilling-cafe-01.jpg"
-                class="d-block user-select-none"
-                width="100%"
-                height="200"
-                aria-label="Placeholder: Image cap"
-                focusable="false"
-                role="img"
-                preserveAspectRatio="xMidYMid slice"
-                viewBox="0 0 318 180"
-                style="font-size: 1.125rem; text-anchor: middle"
-              />
-              <div class="card-footer text-muted">Footer</div>
-            </div>
+          <div class="col-6">
+            <img src="./Image/about-pic-1.png" alt="Giới Thiệu" />
           </div>
         </div>
-        <table class="table table-hover">
-          <thead>
-            <tr class="table-primary">
-              <th scope="row">Name</th>
-              <th>Type</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="4">asdasd</td>
-              <td colspan="2">asdasd</td>
-              <td colspan="2">asdasd</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
+  </div>
+  </section>
+  </div>
+  <hr>
+  <div class="container p-3" id="phattrien">
+    <section class="text-center">
+      <div class="row">
+        <h1 class="mb-4 fw-bold">
+          CÁC CỘT MỐC PHÁT TRIỂN NHÀ HÀNG ĐẦU TIÊN TẠI CÁC TỈNH THÀNH
+        </h1>
+        <div class="row fw-bold text-start">
+          <div class="col-6">
+            <ul>
+              <li class="pb-3">
+                <span> Tháng 12/1997 - TP.HCM </span>
+              </li>
+              <li class="pb-3">Tháng 06/2006 - Hà Nội</li>
+              <li class="pb-3">Tháng 08/2006 - Hải Phòng & Cần Thơ</li>
+              <li class="pb-3">Tháng 07/2007 - Đồng Nai – Biên Hòa</li>
+              <li class="pb-3">Tháng 01/2008 - Vũng Tàu</li>
+              <li class="pb-3">Tháng 05/2008 - Huế</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <img src="./Image/about-pic-3.png" alt="Giới Thiệu" />
+          </div>
+        </div>
+    </section>
+  </div>
+  <hr class="border-black">
+  <div class="container my-5" id="banggia">
+    <h1 class="text-center mb-4">Bảng Giá Nước Uống KFC</h1>
+    <table class="table table-bordered border-dark text-center align-middle">
+      <thead>
+        <tr class="table-danger">
+          <th colspan="2">Name</th>
+          <th>Type</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2" colspan="2" background="./Image/greentea.jpg" align="end"
+            class="text-success fw-bold bg-image">
+            Green Tea</td>
+          <td>Hot</td>
+          <td rowspan="2">25,000VND</td>
+        </tr>
+        <tr>
+          <td>Cold</td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="2" background="./Image/blacktea.jpg" class="fw-bold">Black
+            Tea</td>
+          <td>Hot</td>
+          <td rowspan="2">28,000VND</td>
+        </tr>
+        <tr>
+          <td>Cold</td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="2" class="text-success fw-bold" background="./Image/olongtea.jpg">Oolong
+            Tea</td>
+          <td>Hot</td>
+          <td rowspan="2">30,000VND</td>
+        </tr>
+        <tr>
+          <td>Cold</td>
+        </tr>
+        <tr>
+          <td rowspan="3" class="fw-bold" background="./Image/fruit.jpg">Fruit
+            Tea</td>
+          <td>Lemon Tea</td>
+          <td rowspan="3">Cold (Only)</td>
+          <td>30,000VND</td>
+        </tr>
+        <tr>
+          <td>Apple Tea</td>
+          <td>35,000VND</td>
+        </tr>
+        <tr>
+          <td>Peach Tea</td>
+          <td>35,000VND</td>
+        </tr>
+        <tr>
+          <td rowspan="3" class="fw-bold" background="./Image/milktea.png">Milk Tea</td>
+          <td>Green Milk Tea</td>
+          <td rowspan="3">Hot</td>
+          <td>27,000VND</td>
+        </tr>
+        <tr>
+          <td>Black Milk Tea</td>
+          <td>30,000VND</td>
+        </tr>
+        <tr>
+          <td>Oolong Milk Tea</td>
+          <td>32,000VND</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <footer class="text-center bg-dark text-light">
+    <div class="p-3">
+      © 2020 Copyright:
+      <a class="text-decoration-none text-light" href="">HuynhBao</a>
     </div>
-    <div class="container-fluid p-0 bg-primary">
-      <div
-        class="text-center p-3"
-        style="background-color: rgba(0, 0, 0, 0.05)"
-      >
-        © 2020 Copyright:
-        <a class="text-body" href="https://HuynhBao/">HuynhBao</a>
-      </div>
-    </div>
-  </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-    integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-    crossorigin="anonymous"
-  ></script>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+  integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+
 </html>
