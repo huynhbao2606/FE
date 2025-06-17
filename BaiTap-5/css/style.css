@@ -1,3 +1,10 @@
+*,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html,
 body {
     color: #636363;
@@ -39,6 +46,24 @@ a {
     background-position: right center;
 }
 
+.title p {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f55f8d;
+}
+
+.title h2 {
+    font-size: 70px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #262626;
+    margin-bottom: 20px;
+}
+
+.section-top {
+    padding: 115px;
+}
 
 /* Header */
 header {
@@ -95,6 +120,125 @@ nav ul {
     animation: upDown 0.3s forwards;
 }
 
+/* Carousel */
+.carousel {
+    padding-top: 180px;
+    overflow: hidden;
+
+    background-image: url("../images/pic2.png");
+    background-position: top;
+    background-size: 100%;
+}
+
+.carousel_content {
+    display: flex;
+    align-items: center;
+}
+
+.carousel_content li {
+    padding: 10px 5px 10px 0;
+    font-size: 20px;
+}
+
+.carousel_content ul {
+    margin-bottom: 20px;
+}
+
+.carousel_article p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.carousel_left {
+    width: 60%;
+}
+
+.carousel_right {
+    width: 40%;
+}
+
+.carousel_banner {
+    width: 570px;
+    margin-left: 50px;
+}
+
+.carousel_banner img {
+    max-width: 100%;
+    display: block;
+}
+
+.carousel_article i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+
+    font-size: 25px;
+    color: #fff;
+    border-radius: 35px;
+    font-weight: 900;
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+    margin-right: 10px;
+}
+
+/* Services */
+.services {
+    background-image: url("../images/bg2.png");
+    background-size: cover;
+    background-position: top center;
+    text-align: center;
+}
+
+.services_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.services_item {
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px 45px;
+    transform: translateY(0);
+    transition: all 0.5s;
+    border-image: 100 round;
+    border: 3px solid transparent;
+}
+
+.services_item:hover {
+    transform: translateY(-20px);
+    border-image: url("../images/br.png") 1 round;
+}
+
+.services_item img {
+    width: 215px;
+}
+
+.services_item h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #262626;
+    margin: 15px 0;
+}
+
+/* About Us */
+.about {
+    background-image: url("../images/bg15.png");
+    background-size: 100%;
+    background-position: center right;
+    padding-bottom: 85px;
+    overflow: hidden;
+}
+
+.about_content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
 
 /* Animation */
 @keyframes upDown {
