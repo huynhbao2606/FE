@@ -11,6 +11,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -701,7 +702,7 @@ footer::before {
 }
 
 .footer_form button:hover i {
-    animation: toLeftFromRight 0.5s forwards;
+    animation: toTopRight 0.5s forwards;
     display: inline-block;
 }
 
@@ -760,7 +761,6 @@ footer::before {
     background: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
     display: block;
     border-radius: 50px;
-
 }
 
 .footer_item li {
@@ -815,6 +815,44 @@ footer::before {
     background: #f55f8d;
 }
 
+/* BACK TO TOP */
+.backToTop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: -4px 4px 24px -10px #f55f8d;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    background-image: linear-gradient(to right, #f55f8d 0%, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+}
+
+.backToTop:hover {
+    background-position: right center;
+}
+
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 /* Animation */
 @keyframes upDown {
     49% {
@@ -857,6 +895,29 @@ footer::before {
     }
 
     51% {
+        opacity: 1;
+    }
+}
+
+@keyframes toTopRight {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    49% {
+        transform: translate(100%, -100%);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(100%, -100%);
+        opacity: 0;
+    }
+    51% {
+        transform: translate(-100%, 100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
         opacity: 1;
     }
 }

@@ -1,3 +1,4 @@
+// Owl
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 30,
@@ -14,3 +15,18 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+// CountUp
+$('.counter').counterUp({
+    delay: 10,
+    time: 3000
+});
+
+
+// Fancybox
+$('[data-fancybox="gallery"]').fancybox({
+    loop: true
+});
+
+//Wow
+new WOW().init();
