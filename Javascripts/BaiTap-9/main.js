@@ -1,30 +1,3 @@
-// Phân Tích
-// Lấy giá trị từ hai ô input (lương một ngày và số ngày làm).
-// Kiểm tra xem cả hai giá trị có phải là số hay không.
-//     Nếu đúng: tính tổng lương và hiển thị kết quả trong thẻ id #alertBai1.
-//     Nếu không đúng: hiển thị thông báo lỗi thẻ id #alertBai1.
-//     Màu sắc của thông báo sẽ thay đổi tùy vào kết quả: xanh cho đúng, đỏ cho lỗi.
-//
-//     Xử Lý
-// Hàm onclick được gán cho nút "Tính Lương", xử lý các bước sau:
-//
-//     Lấy phần tử alertBai1 và tongLuong từ DOM.
-//     Lấy giá trị nhập vào từ các input #soThuNam và #soNgayLam, chuyển sang kiểu số nguyên.
-//     Dùng classList.replace() để thay hidden sang flex để hiện thẻ id #alertBai1.
-//     Nếu cả hai giá trị hợp lệ:
-//     Tính tổng lương = lương một ngày * số ngày
-// Cập nhật nội dung vào #tongLuong
-// Thêm class text-green-400 để hiện màu xanh thành công
-// Nếu một trong hai giá trị không hợp lệ:
-//     Cập nhật nội dung báo lỗi
-// Thêm class text-red-400 để cảnh báo màu đỏ
-//
-// Đầu Ra
-// Kết quả xử lý sẽ được xuất ra dưới dạng:
-//
-//     Nếu nhập đúng: hiển thị số tiền lương đã tính
-// Nếu nhập sai: hiển thị thông báo lỗi như Vui lòng nhập đúng số!.
-// Cả hai trường hợp đều được hiển thị bên trong thẻ #alertBai1.
 // Bài 1: Tính Lương
 // Phân Tích
 // Nhập lương một ngày và số ngày làm.
