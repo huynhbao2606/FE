@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="bg-slate-100  container max-w-4xl mx-auto p-6 m-10 rounded-xl inset-shadow-sm">
+    <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+    </div>
+    <div class="md:flex">
+        <ul class="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0"
+            id="tabs" data-tabs-toggle="#tab-contents"
+            data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
+            data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+            role="tablist">
+            <li class="me-2" role="presentation">
+                <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                        id="bai-1-tab" data-tabs-target="#bai-1" type="button" role="tab" aria-controls="bai-1"
+                        aria-selected="true"><span class="whitespace-nowrap">Bài 1</span></button>
+            </li>
+            <li class="me-2" role="presentation">
+                <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                        id="bai-2-tab" data-tabs-target="#bai-2" type="button" role="tab" aria-controls="bai-2"
+                        aria-selected="false"><span class="whitespace-nowrap">Bài 2</span></button>
+            </li>
+            <li class="me-2" role="presentation">
+                <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                        id="bai-3-tab" data-tabs-target="#bai-3" type="button" role="tab" aria-controls="bai-3"
+                        aria-selected="false"><span class="whitespace-nowrap">Bài 3</span></button>
+            </li>
+            <li class="me-2" role="presentation">
+                <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                        id="bai-4-tab" data-tabs-target="#bai-4" type="button" role="tab" aria-controls="bai-4"
+                        aria-selected="false"><span class="whitespace-nowrap">Bài 4</span></button>
+            </li>
+            <li class="me-2" role="presentation">
+                <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                        id="bai-5-tab" data-tabs-target="#bai-5" type="button" role="tab" aria-controls="bai-5"
+                        aria-selected="false"><span class="whitespace-nowrap">Bài 5</span></button>
+            </li>
+        </ul>
+
+        <div id="tab-contents"
+             class="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-lg w-full">
+
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-1" role="tabpanel"
+                 aria-labelledby="bai-1-tab">
+                <article class="format lg:format-lg dark:format-invert mb-5">
+                    <h1 class="text-center">
+                        Tính Tiền Lương Nhân Viên
+                    </h1>
+                </article>
+                <div id="accordion-open" data-accordion="open" class="mb-10">
+                    <h2 id="accordion-open-heading-1">
+                        <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                data-accordion-target="#accordion-open-body-1" aria-expanded="false"
+                                aria-controls="accordion-open-body-1"><span class="flex items-center"><svg
+                                class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd"
+                                                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                                                         clip-rule="evenodd"></path></svg> Phân Tích</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
+                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <ul class="list-disc list-inside">
+                                <li>Nhập lương một ngày và số ngày làm từ người dùng.</li>
+                                <li>Kiểm tra cả hai giá trị phải là số hợp lệ.</li>
+                                <li>Nếu hợp lệ: tính tổng tiền lương, định dạng số tiền theo chuẩn VND.</li>
+                                <li>Nếu không hợp lệ: hiển thị thông báo lỗi trong <code>#alertBai1</code>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 id="accordion-open-heading-2">
+                        <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                data-accordion-target="#accordion-open-body-2" aria-expanded="false"
+                                aria-controls="accordion-open-body-2"><span class="flex items-center"><svg
+                                class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd"
+                                                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                                                         clip-rule="evenodd"></path></svg>Xử Lý</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
+                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p>Hàm <code>onclick</code> được gán cho nút "Tính Lương", xử lý các bước sau:</p>
+                            <ol class="list-decimal list-inside">
+                                <li>Lấy giá trị từ input <code>#luongMotNgay</code> và <code>#soNgayLam</code>
+                                </li>
+                                <li>Kiểm tra cả hai giá trị phải là số hợp lệ!.</li>
+                                <li>Nếu hợp lệ:
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li>Tính tổng lương = lương/ngày × số ngày.</li>
+                                        <li>Định dạng số tiền bằng <code>Intl.NumberFormat(\"vi-VN\")</code>.</li>
+                                        <li>Dùng hàm <code>hienThongBao()</code> để hiển thị nội dung và đổi màu sang
+                                            xanh.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Nếu không hợp lệ:
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li>Hiển thị thông báo lỗi bằng <code>hienThongBao()</code> và đổi màu đỏ.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <h2 id="accordion-open-heading-3">
+                        <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                                data-accordion-target="#accordion-open-body-3" aria-expanded="false"
+                                aria-controls="accordion-open-body-3"><span class="flex items-center"><svg
+                                class="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd"
+                                                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                                                         clip-rule="evenodd"></path></svg> Đầu Ra</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
+                        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p>Kết quả xử lý sẽ được <strong>xuất ra</strong> như sau:</p>
+                            <ul class="list-disc list-inside">
+                                <li>Nếu nhập đúng: hiển thị kết quả như <code>Số Tiền Lương: 3.000.000 ₫</code>.</li>
+                                <li>Nếu nhập sai: hiển thị cảnh báo như <code>Vui lòng nhập đúng số!</code>.</li>
+                            </ul>
+                            <p>Cả hai đều hiển thị bên trong thẻ <code>#alertBai1</code>, thông báo qua hàm
+                                <code>hienThongBao()</code>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-sm mx-auto mt-10">
+                    <div class="relative z-0 mb-10">
+                        <input
+                                type="number"
+                                id="luongMotNgay"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" "/>
+                        <label for="luongMotNgay"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Lương một ngày
+                        </label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input type="number" id="soNgayLam"
+                               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                        />
+                        <label for="soNgayLam"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Số ngày làm
+                        </label>
+                    </div>
+                    <button type="submit" id="tinhLuong"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+                        Tính lương
+                    </button>
+                </div>
+                <div id="alertBai1"
+                     class="hidden items-center p-4 mt-10 text-sm rounded-lg  bg-[#111827]"
+                     role="alert">
+                    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                    </svg>
+
+                    <span class="sr-only">Info</span>
+
+                    <div>
+                        <span class="font-medium" id="tongLuong"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-2" role="tabpanel"
+                 aria-labelledby="bai-2-tab"><p class="text-sm text-gray-500 dark:text-gray-400">
+
+                <article class="format lg:format-lg dark:format-invert mb-5">
+                    <h1 class="text-center">
+                        Tính Giá Trị Trung Bình
+                    </h1>
+                </article>
+
+                <div class="max-w-sm mx-auto mt-10">
+                    <div class="relative z-0 mb-10">
+                        <input
+                                type="number"
+                                id="soThuNhat"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" "/>
+                        <label for="soThuNhat"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Số Thứ 1
+                        </label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input type="number"
+                               id="soThuHai"
+                               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                        />
+                        <label for="soThuHai"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Số Thứ 2
+                        </label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input
+                                type="number"
+                                id="soThuBa"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" "/>
+                        <label for="soThuBa"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Số Thứ 3
+                        </label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input type="number"
+                               id="soThuTu"
+                               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                        />
+                        <label for="soThuTu"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Số Thứ 4
+                        </label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input
+                                type="number"
+                                id="soThuNam"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" "/>
+                        <label for="soThuNam"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Số Thứ 5
+                        </label>
+                    </div>
+
+                    <button type="submit" id="tinhTrungBinh"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+                        Tính Trung Bình
+                    </button>
+                </div>
+
+                <div id="alertBai2"
+                     class="hidden items-center p-4 mt-10 text-sm rounded-lg  bg-[#111827]"
+                     role="alert">
+                    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                    </svg>
+
+                    <span class="sr-only">Info</span>
+
+                    <div>
+                        <span class="font-medium" id="ketQuaTrungBinh"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-3" role="tabpanel"
+                 aria-labelledby="bai-3-tab">
+
+                <article class="format lg:format-lg dark:format-invert mb-5">
+                    <h1 class="text-center">
+                        Quy Đổi Tiền Tệ
+                    </h1>
+                </article>
+
+
+                <div class="max-w-sm mx-auto mt-10">
+                    <div class="relative z-0 mb-10">
+                        <input type="number"
+                               id="tyLeTienTe"
+                               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                        />
+                        <label for="tyLeTienTe"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Nhập Tỷ Lệ Tiền Tệ VND
+                        </label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input
+                                type="number"
+                                id="quyDoi"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" "/>
+                        <label for="quyDoi"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Nhập Số USD
+                        </label>
+                    </div>
+
+                    <button type="submit" id="quyDoiTien"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+                        Tính Trung Bình
+                    </button>
+                </div>
+
+                <div id="alertBai3"
+                     class="hidden items-center p-4 mt-10 text-sm rounded-lg  bg-[#111827]"
+                     role="alert">
+                    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                    </svg>
+
+                    <span class="sr-only">Info</span>
+
+                    <div>
+                        <span class="font-medium" id="ketQuaQuyDoi"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-4" role="tabpanel"
+                 aria-labelledby="bai-4-tab">
+
+                <article class="format lg:format-lg dark:format-invert mb-5">
+                    <h1 class="text-center">
+                        Tính Diện Tích, Chu Vi Hình Chữ Nhật
+                    </h1>
+                </article>
+
+
+                <div class="max-w-sm mx-auto mt-10">
+                    <div class="relative z-0 mb-10">
+                        <input type="number"
+                               id="chieuDai"
+                               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                        />
+                        <label for="chieuDai"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Chiều Dài
+                        </label>
+                    </div>
+
+                    <div class="relative z-0 mb-10">
+                        <input
+                                type="number"
+                                id="chieuRong"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" "/>
+                        <label for="chieuRong"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Chiều Rộng
+                        </label>
+                    </div>
+
+                    <button type="submit" id="tinhCVDT"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+                        Tính
+                    </button>
+                </div>
+
+                <div id="alertBai4"
+                     class="hidden items-center p-4 mt-10 text-sm rounded-lg  bg-[#111827]"
+                     role="alert">
+                    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                    </svg>
+
+                    <span class="sr-only">Info</span>
+
+                    <div>
+                        <span class="font-medium" id="ketQuaCVDT"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-5" role="tabpanel"
+                 aria-labelledby="bai-5-tab">
+
+                <article class="format lg:format-lg dark:format-invert mb-5">
+                    <h1 class="text-center">
+                        Tính Tổng 2 Ký Tự Số
+                    </h1>
+                </article>
+
+                <div class="max-w-sm mx-auto mt-10">
+                    <div class="relative z-0 mb-10">
+                        <input
+                                type="number"
+                                id="nhap2So"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" "/>
+                        <label for="nhap2So"
+                               class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            Nhập 2 Kí Tự Số
+                        </label>
+                    </div>
+
+                    <button type="submit" id="tinhTong"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+                        Tính
+                    </button>
+                </div>
+
+                <div id="alertBai5"
+                     class="hidden items-center p-4 mt-10 text-sm rounded-lg  bg-[#111827]"
+                     role="alert">
+                    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                    </svg>
+
+                    <span class="sr-only">Info</span>
+
+                    <div>
+                        <span class="font-medium" id="ketQuaTong"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
