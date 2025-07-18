@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="bg-slate-100  container max-w-4xl mx-auto p-6 m-10 rounded-xl inset-shadow-sm">
+  <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+  </div>
+  <div class="md:flex">
+    <ul class="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0"
+        id="tabs" data-tabs-toggle="#tab-contents"
+        data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
+        data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+        role="tablist">
+      <li class="me-2" role="presentation">
+        <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                id="bai-1-tab" data-tabs-target="#bai-1" type="button" role="tab" aria-controls="bai-1"
+                aria-selected="true"><span class="whitespace-nowrap">Bài 1</span></button>
+      </li>
+      <li class="me-2" role="presentation">
+        <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                id="bai-2-tab" data-tabs-target="#bai-2" type="button" role="tab" aria-controls="bai-2"
+                aria-selected="false"><span class="whitespace-nowrap">Bài 2</span></button>
+      </li>
+      <li class="me-2" role="presentation">
+        <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                id="bai-3-tab" data-tabs-target="#bai-3" type="button" role="tab" aria-controls="bai-3"
+                aria-selected="false"><span class="whitespace-nowrap">Bài 3</span></button>
+      </li>
+      <li class="me-2" role="presentation">
+        <button class="inline-block px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                id="bai-4-tab" data-tabs-target="#bai-4" type="button" role="tab" aria-controls="bai-4"
+                aria-selected="false"><span class="whitespace-nowrap">Bài 4</span></button>
+      </li>
+    </ul>
+
+    <div id="tab-contents"
+         class="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-lg w-full">
+
+      <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-1" role="tabpanel"
+           aria-labelledby="bai-1-tab">
+        <article class="format lg:format-lg dark:format-invert mb-5">
+          <h1 class="text-center">
+            Quản Lý Tuyển Sinh
+          </h1>
+        </article>
+        <div class="max-w-sm mx-auto mt-10">
+          <div class="relative z-0 mb-10">
+            <input
+                    type="number"
+                    id="inputDiemChuan"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "/>
+            <label for="inputDiemChuan"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Điểm Chuẩn
+            </label>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <label for="inputKhuVuc" class="sr-only">Chọn Khu Vực</label>
+            <select id="inputKhuVuc" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+              <option selected>Chọn Khu Vực</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <label for="inputDoiTuong" class="sr-only">Chọn Đối Tượng</label>
+            <select id="inputDoiTuong" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+              <option selected>Chọn Đối Tượng</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <input type="number" id="inputDiemThu1"
+                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                   placeholder=" "
+            />
+            <label for="inputDiemThu1"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Điểm Môn Thứ 1
+            </label>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <input type="number" id="inputDiemThu2"
+                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                   placeholder=" "
+            />
+            <label for="inputDiemThu2"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Điểm Môn Thứ 2
+            </label>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <input type="number" id="inputDiemThu3"
+                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                   placeholder=" "
+            />
+            <label for="inputDiemThu3"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Điểm Môn Thứ 3
+            </label>
+          </div>
+
+          <button type="submit" id="btnKetQua"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+            Kết Quả
+          </button>
+        </div>
+      </div>
+
+      <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-2" role="tabpanel"
+           aria-labelledby="bai-2-tab"><p class="text-sm text-gray-500 dark:text-gray-400">
+
+        <article class="format lg:format-lg dark:format-invert mb-5">
+          <h1 class="text-center">
+            Tính Tiền Điện
+          </h1>
+        </article>
+
+        <div class="max-w-sm mx-auto mt-10">
+          <div class="relative z-0 mb-10">
+            <input
+                    type="text"
+                    id="txtTen"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "/>
+            <label for="txtTen"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Nhập Họ Tên
+            </label>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <input type="number"
+                   id="inputSoKw"
+                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                   placeholder=" "
+            />
+            <label for="inputSoKw"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Nhập Số Kw
+            </label>
+          </div>
+
+          <button type="submit" id="btnTinhTienDien"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+            Tính Tiền Điện
+          </button>
+        </div>
+
+      </div>
+
+      <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-3" role="tabpanel"
+           aria-labelledby="bai-3-tab">
+
+        <article class="format lg:format-lg dark:format-invert mb-5">
+          <h1 class="text-center">
+            Tính Thuế Thu Nhập Cá Nhân
+          </h1>
+        </article>
+
+
+        <div class="max-w-sm mx-auto mt-10">
+          <div class="relative z-0 mb-10">
+            <input type="text"
+                   id="txtTenCaNhan"
+                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                   placeholder=" "
+            />
+            <label for="txtTenCaNhan"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Nhập Họ Tên
+            </label>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <input
+                    type="number"
+                    id="inputThuNhap"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "/>
+            <label for="inputThuNhap"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Nhập Thu Nhập Năm
+            </label>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <input
+                    type="number"
+                    id="inputPhuThuoc"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "/>
+            <label for="inputPhuThuoc"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Số Người Phụ Thuộc
+            </label>
+          </div>
+
+          <button type="submit" id="btnTinhTienThue"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+            Tính Tiền Thuế
+          </button>
+        </div>
+
+      </div>
+
+      <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="bai-4" role="tabpanel"
+           aria-labelledby="bai-4-tab">
+
+        <article class="format lg:format-lg dark:format-invert mb-5">
+          <h1 class="text-center">
+            Tính Tiền Cáp
+          </h1>
+        </article>
+
+
+
+        <div class="max-w-sm mx-auto mb-10">
+          <div class="relative z-0 mb-10">
+            <label for="inputKhachHang" class="sr-only">Chọn Đối Tượng</label>
+            <select id="inputKhachHang" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+              <option selected>Chọn Khách Hàng</option>
+              <option value="NhaDan">Nhàn Dân</option>
+              <option value="DoanhNghiep">Doanh Nghiệp</option>
+            </select>
+          </div>
+
+          <div class="relative z-0 mb-10">
+            <input type="text"
+                   id="txtMaKhachHang"
+                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                   placeholder=" "
+            />
+            <label for="txtMaKhachHang"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Nhập Mã Khách Hàng
+            </label>
+          </div>
+
+
+          <div class="relative z-0 mb-10">
+            <input
+                    type="number"
+                    id="inputSoKenh"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "/>
+            <label for="inputSoKenh"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Số Kênh Cao Cấp
+            </label>
+          </div>
+
+          <div id="divKetNoi" class="hidden relative z-0 mb-10">
+            <input
+                    type="number"
+                    id="inputSoKetNoi"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "/>
+            <label for="inputSoKetNoi"
+                   class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+              Số Kết Nối
+            </label>
+          </div>
+
+          <button type="submit" id="btnTinhTienCap"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-4xl text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+            Tính Tiền Cáp
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>

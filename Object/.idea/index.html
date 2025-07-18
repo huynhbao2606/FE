@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.7/sketchy/bootstrap.min.css" integrity="sha512-EOr70nK2tMJ/cHfS5UFzzkzP+d5sQKG7WBllcA9q80J6Q8YlP3Rc3Mo1921wB0Xv7tF9gvrDnSs++Swd2Ee5Tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid" bis_skin_checked="1">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01" bis_skin_checked="1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Object
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Class</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" bis_skin_checked="1">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider" bis_skin_checked="1"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-5">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab" tabindex="-1">Object</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#profile" aria-selected="false" role="tab">Class</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" data-bs-toggle="tab" href="#sinhVienTab" aria-selected="false" role="tab">Sinh Viên</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content" bis_skin_checked="1">
+        <div class="tab-pane fade" id="home" role="tabpanel" bis_skin_checked="1">
+            <table class="table table-hover">
+                <thead>
+                <tr class="table-dark">
+                    <th scope="col">Mã</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Tuổi</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Điện Thoại</th>
+                    <th scope="col">Trạng Thái </th>
+                </tr>
+                </thead>
+                <tbody id="sinhVien">
+                </tbody>
+            </table>
+            <table class="table table-hover mt-5">
+                <thead>
+                <tr class="table-info">
+                    <th scope="col" width="25%">Tên</th>
+                    <th scope="col" width="25%">Hãng Xe</th>
+                    <th scope="col" width="25%">Màu Xe</th>
+                    <th scope="col" width="25%">Trạng Thái</th>
+                </tr>
+                </thead>
+                <tbody id="xeHoi">
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" bis_skin_checked="1">
+            <form class="container w-50" id="carForm">
+                <fieldset>
+                    <div>
+                        <label for="tenXe" class="form-label mt-4">Tên xe</label>
+                        <input type="text" class="form-control" id="tenXe" placeholder="Nhập Tên Xe">
+                    </div>
+                    <div>
+                        <label for="hangXe" class="form-label mt-4">Hãng Xe</label>
+                        <input type="text" class="form-control" id="hangXe" placeholder="Nhập Hãng Xe" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="mauXe" class="form-label mt-4">Màu Xe</label>
+                        <input type="text" class="form-control" id="mauXe" placeholder="Nhập Màu Xe" autocomplete="off">
+                    </div>
+
+                    <button id="btnTao" type="submit" class="btn btn-primary mt-4">Tạo</button>
+                </fieldset>
+            </form>
+
+            <h1 class="text-center mt-5">Thông Tin Xe</h1>
+
+            <table class="table table-hover mt-5">
+                <thead>
+                <tr class="table-dark">
+                    <th scope="col">Tên Xe</th>
+                    <th scope="col">Hãng Xe</th>
+                    <th scope="col">Màu Xe</th>
+                </tr>
+                </thead>
+                <tbody id="car">
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade active show" id="sinhVienTab" role="tabpanel" bis_skin_checked="1">
+            <form class="container w-50" id="carForm">
+                <fieldset>
+                    <div>
+                        <label for="maSv" class="form-label mt-4">Mã Sinh Viên</label>
+                        <input type="text" class="form-control" id="maSv" placeholder="Nhập Mã Sinh Viên">
+                    </div>
+                    <div>
+                        <label for="tenSv" class="form-label mt-4">Tên</label>
+                        <input type="text" class="form-control" id="tenSv" placeholder="Nhập Tên Sinh Viên" autocomplete="off">
+                    </div>
+                    <div bis_skin_checked="1">
+                        <label for="loaiSV" class="form-label mt-4">Loại Sinh Viên</label>
+                        <select class="form-select" id="loaiSv">
+                            <option>Nghèo</option>
+                            <option>Giàu</option>
+                            <option>Bình Thường</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="diemToan" class="form-label mt-4">Điểm Toán</label>
+                        <input type="number" class="form-control" id="diemToan" placeholder="Nhập Điểm Toán" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="diemVan" class="form-label mt-4">Điểm Văn</label>
+                        <input type="number" class="form-control" id="diemVan" placeholder="Nhập Điểm Văn" autocomplete="off">
+                    </div>
+
+                    <button id="btnTaoSv" type="submit" class="btn btn-primary mt-4">Tạo Sinh Viên</button>
+                </fieldset>
+            </form>
+
+            <h1 class="mt-5 text-center">Thông Tin Sinh Viên</h1>
+
+            <table class="table table-hover mt-5">
+                <thead>
+                <tr class="table-dark">
+                    <th scope="col" width="20%">Mã SV</th>
+                    <th scope="col" width="20%">Tên</th>
+                    <th scope="col" width="20%">Loại SV</th>
+                    <th scope="col" width="20%">Điểm Trung Bình</th>
+                    <th scope="col" width="20%">Xếp Loại</th>
+                </tr>
+                </thead>
+                <tbody id="outSinhVien">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
