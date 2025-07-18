@@ -1,22 +1,30 @@
+// ============================
 // Bài 1: Tính Lương
+// ============================
+
 // Phân Tích
-// Nhập lương một ngày và số ngày làm.
-// Kiểm tra tính hợp lệ của cả hai giá trị.
-// Nếu hợp lệ → tính tổng tiền lương, hiển thị định dạng VND.
-// Nếu không hợp lệ → báo lỗi.
+//  Nhập vào: lương một ngày và số ngày làm.
+//  Kiểm tra cả hai có hợp lệ không (phải là số, không để trống).
+//  Nếu hợp lệ:
+//      Tính tổng lương = lương/ngày × số ngày làm.
+//      Định dạng kết quả sang tiền Việt Nam (VND).
+//      Hiển thị thông báo kết quả.
+//  Nếu sai:
+//      Hiển thị thông báo lỗi.
 
 // Xử Lý
-// Ép kiểu số cho hai giá trị nhập vào.
-// Nếu cả hai là số:
-//     Tính lương = lương/ngày × số ngày
-//     Định dạng tiền tệ Việt Nam
-//     Hiển thị qua hàm hienThongBao()
-// Nếu lỗi:
-//     Gọi hàm hienThongBao() để báo lỗi.
+//  Lấy giá trị từ input: luongMotNgay, soNgayLam.
+//  Ép kiểu bằng parseFloat hoặc nhân trực tiếp.
+//  Nếu hợp lệ:
+//      Tính tổng lương.
+//      Dùng Intl.NumberFormat("vi-VN") định dạng tiền.
+//      Gọi hienThongBao("alertBai1", ..., "success").
+//  Nếu sai:
+//      Gọi hienThongBao("alertBai1", ..., "error").
 
 // Đầu Ra
-// Nếu đúng: "Số Tiền Lương: xx.xxx.000 ₫"
-// Nếu sai: "Vui lòng nhập đúng số!"
+//  Nếu đúng: "Số Tiền Lương: 3.000.000 ₫"
+//  Nếu sai: "Vui lòng nhập đúng số!"
 document.getElementById("tinhLuong").onclick = function () {
     let luongMotNgay = document.getElementById("luongMotNgay").value;
     let soNgayLam = document.getElementById("soNgayLam").value;
@@ -34,24 +42,28 @@ document.getElementById("tinhLuong").onclick = function () {
     }
 }
 
+// ============================
 // Bài 2: Tính Trung Bình
+// ============================
+
 // Phân Tích
-// Nhập 5 số từ người dùng.
-// Kiểm tra tất cả số có hợp lệ hay không.
-// Nếu hợp lệ → tính trung bình 5 số.
-// Nếu sai → báo lỗi.
+//  Nhập 5 số từ người dùng.
+//  Kiểm tra tất cả số có hợp lệ hay không (là số, không rỗng).
+//  Nếu hợp lệ → tính trung bình 5 số.
+//  Nếu sai → báo lỗi.
 
 // Xử Lý
-// Dùng parseFloat để ép kiểu 5 giá trị.
-// Nếu hợp lệ:
-//     Tính trung bình = tổng 5 số / 5
-//     Hiển thị kết quả bằng hienThongBao()
-// Nếu sai:
-//     Hiển thị thông báo lỗi
+//  Lấy từng giá trị: soThuNhat → soThuNam.
+//  Ép kiểu bằng parseFloat.
+//  Nếu hợp lệ:
+//      Tính tổng và chia cho 5.
+//      Gọi hienThongBao("alertBai2", ..., "success").
+//  Nếu sai:
+//      Gọi hienThongBao("alertBai2", ..., "error").
 
 // Đầu Ra
-// Nếu đúng: "Tính Trung Bình Là: X"
-// Nếu sai: "Vui lòng nhập đúng số!"
+//  Nếu đúng: "Tính Trung Bình Là: X"
+//  Nếu sai: "Vui lòng nhập số!"
 document.getElementById("tinhTrungBinh").onclick = function () {
     let soThuNhat = parseFloat(document.getElementById("soThuNhat").value);
     let soThuHai = parseFloat(document.getElementById("soThuHai").value);
@@ -68,25 +80,32 @@ document.getElementById("tinhTrungBinh").onclick = function () {
     }
 }
 
+// ============================
 // Bài 3: Quy Đổi Tiền Tệ
+// ============================
+
 // Phân Tích
-// Nhập tỷ lệ VND và số USD.
-// Kiểm tra hợp lệ.
-// Nếu đúng: nhân và hiển thị kết quả định dạng VND.
-// Nếu sai: thông báo lỗi.
+//  Nhập tỷ giá quy đổi và số USD.
+//  Kiểm tra cả hai giá trị có hợp lệ không (là số, không rỗng).
+//  Nếu hợp lệ:
+//      Tính số tiền VND bằng USD × tỷ giá.
+//      Định dạng theo chuẩn VND.
+//      Hiển thị kết quả.
+//  Nếu sai → hiển thị thông báo lỗi.
 
 // Xử Lý
-// Ép kiểu 2 giá trị tỷ lệ và USD.
-// Nếu hợp lệ:
-//     Nhân USD × tỷ lệ
-//     Định dạng VND
-//     Hiển thị bằng hienThongBao()
-// Nếu sai:
-//     Hiển thị lỗi
+//  Lấy tyLeTienTe và quyDoi.
+//  Ép kiểu bằng parseFloat.
+//  Nếu hợp lệ:
+//      Tính tiền: USD × tỷ lệ.
+//      Dùng Intl.NumberFormat("vi-VN") định dạng VND.
+//      Gọi hienThongBao("alertBai3", ..., "success").
+//  Nếu sai:
+//      Gọi hienThongBao("alertBai3", ..., "error").
 
 // Đầu Ra
-// Nếu đúng: "Tiền VND Là: xxx.xxx ₫"
-// Nếu sai: "Vui lòng nhập đúng số!"
+//  Nếu đúng: "Tiền VND Là: xxx.xxx ₫"
+//  Nếu sai: "Vui lòng nhập đúng số!"
 document.getElementById("quyDoiTien").onclick = function () {
     let tyLeTienTe = document.getElementById("tyLeTienTe").value;
     let quyDoi = document.getElementById("quyDoi").value;
@@ -104,30 +123,35 @@ document.getElementById("quyDoiTien").onclick = function () {
     }
 }
 
+// ============================
 // Bài 4: Tính Chu Vi – Diện Tích
+// ============================
+
 // Phân Tích
-// Nhập chiều dài và chiều rộng.
-// Kiểm tra hợp lệ.
-// Nếu đúng → tính chu vi & diện tích.
-// Nếu sai → báo lỗi.
+//  Nhập chiều dài và chiều rộng hình chữ nhật.
+//  Kiểm tra cả hai có hợp lệ (số, không rỗng).
+//  Nếu hợp lệ:
+//      Tính diện tích = dài × rộng.
+//      Tính chu vi = (dài + rộng) × 2.
+//      Hiển thị kết quả 2 dòng.
+//  Nếu sai → thông báo lỗi.
 
 // Xử Lý
-// Ép kiểu số cho chiều dài và rộng.
-// Nếu hợp lệ:
-//     Diện tích = dài × rộng
-//     Chu vi = (dài + rộng) × 2
-//     Hiển thị bằng hienThongBao() (dùng \n)
-// Nếu sai:
-//     Hiển thị lỗi
+//  Lấy chieuDai và chieuRong.
+//  Ép kiểu bằng parseFloat.
+//  Nếu hợp lệ:
+//      Tính diện tích, chu vi.
+//      Gộp 2 dòng bằng `\n`.
+//      Gọi hienThongBao("alertBai4", ..., "success").
+//  Nếu sai:
+//      Gọi hienThongBao("alertBai4", ..., "error").
 
 // Đầu Ra
-// Nếu đúng: "Diện Tích: X\nChu Vi: Y"
-// Nếu sai: "Vui lòng nhập đúng số!"
+//  Nếu đúng: "Diện Tích: X\nChu Vi: Y"
+//  Nếu sai: "Vui lòng nhập đúng số!"
 document.getElementById("tinhCVDT").onclick = function () {
     let chieuDai = parseFloat(document.getElementById("chieuDai").value);
     let chieuRong = parseFloat(document.getElementById("chieuRong").value);
-
-    alertBox.classList.replace("hidden", "flex");
 
     if (chieuDai && chieuRong) {
         const tinhDienTich = chieuDai * chieuRong;
@@ -141,25 +165,34 @@ document.getElementById("tinhCVDT").onclick = function () {
     }
 }
 
+// ============================
 // Bài 5: Tính Tổng 2 Ký Tự Số
+// ============================
+
 // Phân Tích
-// Nhập một số có 2 chữ số.
-// Kiểm tra số có hợp lệ không (từ 10 đến 99).
-// Nếu đúng: tách chữ số hàng chục và đơn vị → cộng lại.
-// Nếu sai: báo lỗi.
+//  Nhập một số nguyên có 2 chữ số (từ 10 đến 99).
+//  Kiểm tra có hợp lệ không.
+//  Nếu hợp lệ:
+//      Lấy chữ số hàng chục và hàng đơn vị.
+//      Tính tổng 2 chữ số.
+//      Hiển thị kết quả.
+//  Nếu sai:
+//      Hiển thị thông báo lỗi.
 
 // Xử Lý
-// Ép kiểu int cho giá trị nhập vào.
-// Kiểm tra điều kiện 10 <= số <= 99.
-// Nếu đúng:
-//     Lấy hàng chục và đơn vị
-//     Tính tổng → hiển thị kết quả
-// Nếu sai:
-//     Hiển thị thông báo lỗi
+//  Lấy giá trị từ input → parseInt.
+//  Kiểm tra !isNaN() và từ 10 đến 99.
+//  Nếu hợp lệ:
+//      donVi = so % 10
+//      hangChuc = Math.floor(so / 10)
+//      tổng = donVi + hangChuc
+//      Gọi hienThongBao("alertBai5", ..., "success")
+//  Nếu sai:
+//      Gọi hienThongBao("alertBai5", ..., "error")
 
 // Đầu Ra
-// Nếu đúng: "Cộng 2 Ký Tự Số Là: X"
-// Nếu sai: "Vui lòng nhập số có đúng 2 chữ số!"
+//  Nếu đúng: "Cộng 2 Ký Tự Số Là: X"
+//  Nếu sai: "Vui lòng nhập số có đúng 2 chữ số!"
 document.getElementById("tinhTong").onclick = function () {
     let nhap2So = parseInt(document.getElementById("nhap2So").value);
 
@@ -172,7 +205,7 @@ document.getElementById("tinhTong").onclick = function () {
 
         hienThongBao("alertBai5", "Cộng 2 Ký Tự Số Là: " + tinhTong, "success");
     } else {
-        hienThongBao("alertBai5", "Vui Lòng Nhập 2 SỐ!!" + tinhTong, "error");
+        hienThongBao("alertBai5", "Vui Lòng Nhập 2 SỐ!!", "error");
     }
 }
 
