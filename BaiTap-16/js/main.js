@@ -71,7 +71,7 @@ function handleSapXep() {
     setText("txtSapXep", `Mảng sau khi sắp xếp: ${numArray}`);
 }
 
-function isPrime(num) {
+function soNguyenTo(num) {
     if (num < 2) return false;
     for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0) return false;
@@ -80,8 +80,8 @@ function isPrime(num) {
 }
 
 function handleTimSoNguyen() {
-    const prime = numArray.find(isPrime);
-    setText("txtTimSoNguyen", prime !== undefined ? prime : "Không có số nguyên tố");
+    const nguyenTo = numArray.find(soNguyenTo);
+    setText("txtTimSoNguyen", nguyenTo !== undefined ? nguyenTo : "Không có số nguyên tố");
 }
 
 function handleThemSoNguyen() {
