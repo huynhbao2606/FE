@@ -60,8 +60,8 @@ function doiViTri(i, j) {
 }
 
 function handleDoiCho() {
-    const i1 = Number(getId("inputIndex1"));
-    const i2 = Number(getId("inputIndex2"));
+    const i1 = Number(getId("inputViTri1"));
+    const i2 = Number(getId("inputViTri2"));
     doiViTri(i1, i2);
     setText("txtDoiCho", `Mảng sau khi đổi: ${numArray}`);
 }
