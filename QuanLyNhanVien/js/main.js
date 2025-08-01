@@ -82,7 +82,7 @@ function loadLiveValidations() {
 }
 loadLiveValidations();
 
-function resetValidationState() {
+function resetValidation() {
     for (const id in validationRules) {
         const el = document.getElementById(id);
         el.classList.remove("is-valid", "is-invalid");
@@ -145,23 +145,24 @@ function editNV(id) {
     axios.get(`${API_URL}/${id}`)
         .then(res => {
             const nv = res.data;
-            document.getElementById('username').value = nv.username;
-            document.getElementById('hoTen').value = nv.hoTen;
-            document.getElementById('email').value = nv.email;
-            document.getElementById('password').value = nv.password;
-            document.getElementById('ngayLam').value = nv.ngayLam;
-            document.getElementById('luongCoBan').value = nv.luongCoBan;
-            document.getElementById('chucVu').value = nv.chucVu;
-            document.getElementById('gioLam').value = nv.gioLam;
-
-            document.getElementById('header-title').textContent = "Cập Nhật Nhân Viên";
-            document.getElementById('btnLuu').textContent = "Cập Nhật";
-            document.getElementById('username').disabled = true;
+            fillFormData(nv)
             modal.modal("show");
         })
         .catch(err => console.error(err));
 }
 window.editNV = editNV;
+
+function fillFormData(nv) {
+    document.getElementById('username').value = nv.username;
+    document.getElementById('hoTen').value = nv.hoTen;
+    document.getElementById('email').value = nv.email;
+    document.getElementById('password').value = nv.password;
+    document.getElementById('ngayLam').value = nv.ngayLam;
+    document.getElementById('luongCoBan').value = nv.luongCoBan;
+    document.getElementById('chucVu').value = nv.chucVu;
+    document.getElementById('gioLam').value = nv.gioLam;
+}
+
 
 function deleteNV(id, username) {
     Swal.fire({
@@ -189,7 +190,7 @@ window.deleteNV = deleteNV;
 // Element Click
 document.getElementById('btnThemNhanVien').onclick = function () {
     document.getElementById('formNhanVien').reset();
-    resetValidationState();
+    resetValidation();
     isEditing = false;
     editId = null;
 
