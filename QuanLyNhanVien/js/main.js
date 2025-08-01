@@ -236,7 +236,8 @@ document.getElementById('btnTimNV').onclick = function () {
     if (!keyword) return tableNhanVien(allNhanVien);
 
     const filtered = allNhanVien.filter(nv =>
-        nv.xepLoai().toLowerCase().includes(keyword)
+        nv.xepLoai().toLowerCase().includes(keyword),
+        nv.hoTen().toLowerCase().includes(keyword)
     );
     tableNhanVien(filtered);
 };
