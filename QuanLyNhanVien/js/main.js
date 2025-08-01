@@ -142,6 +142,14 @@ function editNV(id) {
     isEditing = true;
     editId = id;
 
+    $('#ngayLam').datepicker({
+        format: 'mm/dd/yyyy',
+        autoclose: true,
+        todayHighlight: true,
+        todayBtn: "linked",
+        clearBtn: true
+    });
+
     axios.get(`${API_URL}/${id}`)
         .then(res => {
             const nv = res.data;
