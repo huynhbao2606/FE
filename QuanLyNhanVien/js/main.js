@@ -150,6 +150,10 @@ function editNV(id) {
         clearBtn: true
     });
 
+
+    document.getElementById('btnLuu').innerText = "Cập Nhật";
+    document.getElementById('header-title').innerText = "Cập Nhật Nhân Viên";
+
     axios.get(`${API_URL}/${id}`)
         .then(res => {
             const nv = res.data;
