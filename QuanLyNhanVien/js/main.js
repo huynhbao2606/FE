@@ -114,7 +114,7 @@ function tableNhanVien(arr) {
       <td>${nv.email}</td>
       <td>${nv.ngayLam}</td>
       <td>${nv.chucVu === "GiamDoc" ? "Giám Đốc" : nv.chucVu === "TruongPhong" ? "Trưởng Phòng" : "Nhân Viên"}</td>
-      <td>${parseFloat(nv.tongLuong())} VND</td>
+      <td>${parseFloat(nv.tongLuong()).toLocaleString('vi', { style: 'currency', currency: 'VND' })}</td>
       <td>${nv.xepLoai()}</td>
       <td>
         <button class="btn btn-sm btn-primary" onclick="editNV('${nv.id}')">Sửa</button>
