@@ -138,7 +138,7 @@ function getListNhanVien() {
 getListNhanVien();
 
 function editNV(id) {
-    resetValidationState();
+    resetValidation();
     isEditing = true;
     editId = id;
 
