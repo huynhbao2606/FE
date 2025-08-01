@@ -153,6 +153,7 @@ function editNV(id) {
 
     document.getElementById('btnLuu').innerText = "Cập Nhật";
     document.getElementById('header-title').innerText = "Cập Nhật Nhân Viên";
+    document.getElementById('username').disabled = true
 
     axios.get(`${API_URL}/${id}`)
         .then(res => {
