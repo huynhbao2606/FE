@@ -1,0 +1,11 @@
+.btn-1 {
+  border: none;
+  padding: 10px 40px;
+  background-color: $primary-color;
+  border-radius: 5px;
+}
+
+.btn-2 {
+  @extend .btn-1;
+  text-transform: uppercase;
+}

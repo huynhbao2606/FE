@@ -1,0 +1,7 @@
+@mixin styleBlock($bgColor, $width) {
+  width: $width;
+  padding: 100px 0;
+  color: $primary-color;
+  text-align: center;
+  background-color: $bgColor;
+}
