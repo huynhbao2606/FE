@@ -33,7 +33,6 @@ const Comunicate = () => {
         ))
     }
 
-
     return (
         <>
             <div className={"border rounded bg-primary-subtle"}>
