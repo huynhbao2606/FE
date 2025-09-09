@@ -1,20 +1,20 @@
 import { useState } from "react";
 import "./style.css";
 import Swal from "sweetalert2";
+import data from "./dataGlasses.json";
 
 
 export default function BaiTap25() {
-    const [glasses] = useState([
-        { id: "v1", label: "Mẫu 1", thumb: "/images/g1.jpg", overlay: "/images/v1.png" },
-        { id: "v2", label: "Mẫu 2", thumb: "/images/g2.jpg", overlay: "/images/v2.png" },
-        { id: "v3", label: "Mẫu 3", thumb: "/images/g3.jpg", overlay: "/images/v3.png" },
-        { id: "v4", label: "Mẫu 4", thumb: "/images/g4.jpg", overlay: "/images/v4.png" },
-        { id: "v5", label: "Mẫu 5", thumb: "/images/g5.jpg", overlay: "/images/v5.png" },
-        { id: "v6", label: "Mẫu 6", thumb: "/images/g6.jpg", overlay: "/images/v6.png" },
-        { id: "v7", label: "Mẫu 7", thumb: "/images/g7.jpg", overlay: "/images/v7.png" },
-        { id: "v8", label: "Mẫu 8", thumb: "/images/g8.jpg", overlay: "/images/v8.png" },
-        { id: "v9", label: "Mẫu 9", thumb: "/images/g9.jpg", overlay: "/images/v9.png" },
-    ]);
+    const [glasses] = useState(
+        data.map(item => ({
+            id : item.id,
+            label : item.name,
+            thumb : item.url,
+            overlay : item.url,
+            price : item.price,
+            desc : item.desc
+        }))
+    );
 
     const [selected, setSelected] = useState(null);
 
@@ -35,16 +35,19 @@ export default function BaiTap25() {
     }
 
     const renderStatus = () => {
-        return(
-            selectedGlass ? (
-                <span className="badge text-bg-primary px-3 py-2">
-                Đang chọn: {selectedGlass.label}
-              </span>
-            ) : (
-                <span className="text-muted">Hãy chọn một mẫu kính phía dưới</span>
-            )
-        )
-    }
+        return selectedGlass ? (
+            <div className="badge-wrap text-start">
+                <span className="badge text-bg-primary px-3 py-2 d-block mb-2">
+                    Đang chọn: {selectedGlass.label}
+                </span>
+                <p className="mb-1"><strong>Giá:</strong> ${selectedGlass.price}</p>
+                <small className="text-muted">{selectedGlass.desc}</small>
+            </div>
+        ) : (
+            <span className="text-muted">Hãy chọn một mẫu kính phía dưới</span>
+        );
+    };
+
 
     const renderGlass = () => {
         return(

@@ -18,8 +18,8 @@ function App() {
           {/*<RenderingElement/>*/}
           {/*<HandlingEvent/>*/}
           {/*<StateCompoment/>*/}
-          {/*<BaiTap25/>*/}
-          <Comunicate/>
+          <BaiTap25/>
+          {/*<Comunicate/>*/}
       </>
   );
 }
