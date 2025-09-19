@@ -13,7 +13,7 @@ const Child = (props) => {
                             <p>Username : {user.name}</p>
                             <p>Age : {user.age}</p>
                             <button
-                                className="btn btn-primary"
+                                className="btn btn-secondary"
                                 onClick={() => handleReset(user.id)}
                             >
                                 Change Name
